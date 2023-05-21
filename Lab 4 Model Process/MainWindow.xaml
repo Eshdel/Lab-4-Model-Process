@@ -1,0 +1,16 @@
+﻿<Window x:Class="Lab_4_Model_Process.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+        Title="MainWindow" Height="450" Width="800">
+        <Grid>
+            <lvc:CartesianChart Series="{Binding ChartSeries}" LegendLocation="Right">
+                <lvc:CartesianChart.AxisX>
+                    <lvc:Axis Title="Clients" LabelFormatter="{Binding Formatter}"></lvc:Axis>
+                </lvc:CartesianChart.AxisX>
+                <lvc:CartesianChart.AxisY>
+                    <lvc:Axis Title="Time"></lvc:Axis>
+                </lvc:CartesianChart.AxisY>
+            </lvc:CartesianChart>
+        </Grid>
+</Window>
